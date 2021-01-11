@@ -1,3 +1,4 @@
+//..\openlab\platform be default M3 use FreeRTOS
 #include <platform.h>
 #include <stdint.h>
 #include <stdlib.h>
@@ -10,14 +11,17 @@
 #include "event.h"
 
 #ifdef IOTLAB_M3
+//..\openlab\periph
 #include "lps331ap.h"
 #include "isl29020.h"
 #endif
 #include "iotlab_uid.h"
+//..\openlab\net
 #include "mac_csma.h"
 #include "phy.h"
+//..\openlab\appli\iotlab\periph
 #include "iotlab_i2c.h"
-
+//..\openlab\appli\iotlab\lib
 #include "iotlab_uid_num_hashtable.h"
 
 // choose channel in [11-26]
